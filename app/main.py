@@ -1,5 +1,3 @@
-from tkinter.messagebox import RETRY
-
 from aiohttp import web
 
 routes = web.RouteTableDef()
