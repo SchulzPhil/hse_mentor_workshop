@@ -1,9 +1,12 @@
-from aiohttp.web import RouteTableDef, Response, Application, run_app
+from aiohttp.web import (
+    RouteTableDef, Response, Request,
+    Application, run_app
+)
 
 routes = RouteTableDef()
 
 @routes.get('/')
-async def hello_mentor(request: Response) -> Response:
+async def hello_mentor(request: Request) -> Response:
     return Response(text="Hello, Mentor")
 
 
