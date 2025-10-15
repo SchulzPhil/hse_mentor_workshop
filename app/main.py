@@ -4,7 +4,7 @@ routes = web.RouteTableDef()
 
 @routes.get('/')
 async def hello_mentor(request):
-    return web.Response(text="Hello, mentor")
+    return web.Response(text="Hello instructor")
 
 
 def create_app():
