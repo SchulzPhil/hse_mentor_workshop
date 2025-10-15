@@ -1,17 +1,17 @@
-from aiohttp import web
+from aiohttp.web import RouteTableDef, Response, Application, run_app
 
-routes = web.RouteTableDef()
+routes = RouteTableDef()
 
 @routes.get('/')
 async def hello_mentor(request):
-    return web.Response(text="Hello instructor")
+    return Response(text="Hello, Mentor")
 
 
 def create_app():
-    app = web.Application()
+    app = Application()
     app.add_routes(routes)
     return app
 
 
 if __name__ == '__main__':
-    web.run_app(create_app())
+    run_app(create_app())
