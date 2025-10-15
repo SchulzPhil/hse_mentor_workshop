@@ -3,11 +3,11 @@ from aiohttp.web import RouteTableDef, Response, Application, run_app
 routes = RouteTableDef()
 
 @routes.get('/')
-async def hello_mentor(request):
+async def hello_mentor(request: Response) -> Response:
     return Response(text="Hello, Mentor")
 
 
-def create_app():
+def create_app() -> Application:
     app = Application()
     app.add_routes(routes)
     return app
