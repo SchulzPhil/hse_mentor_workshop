@@ -13,6 +13,7 @@ async def hello_mentor(request: Request) -> Response:
 def create_app() -> Application:
     app = Application()
     app.add_routes(routes)
+
     return app
 
 
