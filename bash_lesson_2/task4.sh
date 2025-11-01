@@ -1,0 +1,1 @@
+ping -c$2 -W$3 $1 >/dev/null && echo "available" || echo "not available"
